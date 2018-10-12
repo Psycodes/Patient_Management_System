@@ -23,7 +23,8 @@
         <activity android:name=".SearchMedicine" />
         <activity android:name=".PatientDetails" />
         <activity android:name=".PrescriptionDetails" />
-        <activity android:name=".Add_medicine"></activity>
+        <activity android:name=".Add_medicine" />
+        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>
