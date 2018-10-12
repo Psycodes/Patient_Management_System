@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Patient_Manegement_System</string>
+    <string name="pincode">Pincode</string>
+    <string name="city">City</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="specialization">specialization</string>
+    <string name="landmark">Landmark</string>
+    <string name="hospital">Hospital</string>
+    <string name="dob">Dob</string>
+    <string name="disease">Disease</string>
+    <string name="symptom">Symptom</string>
+    <string name="patient_demo_text">12345 : Suketh C Kotian</string>
+    <string name="medicine_demo">Nicip</string>
+</resources>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutYou"
+    android:background="@drawable/about_you_background"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="20dp"
+        android:background="@drawable/about_you_top_bar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's Know You"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"/>
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+    <EditText
+        android:id="@+id/about_you_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/about_you_edit_text_big"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:hint="@string/first_name"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/about_you_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/about_you_edit_text_big"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:hint="@string/last_name"
+        android:textColorHint="#fff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/about_you_dob"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:background="@drawable/about_you_edit_text_small"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="@string/dob"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:textColorHint="#fff"/>
+
+        <Spinner
+            android:id="@+id/about_you_gender"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="2.5dp"
+            android:layout_marginLeft="2.5dp"
+            android:background="@drawable/spinner" />
+
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/about_you_specialization"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/about_you_edit_text_big"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/specialization"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textColorHint="#fff"/>
+
+    <EditText
+        android:id="@+id/about_you_hospital_name"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/about_you_edit_text_big"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/hospital"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textColorHint="#fff"/>
+
+    <EditText
+        android:id="@+id/about_you_land_mark"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/about_you_edit_text_big"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/landmark"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textColorHint="#fff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/adout_you_city"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:background="@drawable/about_you_edit_text_small"
+            android:ems="10"
+            android:hint="@string/city"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:textColorHint="#fff"/>
+
+        <Spinner
+            android:id="@+id/about_you_state"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="2.5dp"
+            android:layout_marginLeft="2.5dp"
+            android:background="@drawable/spinner"
+            />
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/about_you_pincode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/about_you_edit_text_big"
+        android:ems="10"
+        android:hint="@string/pincode"
+        android:inputType="numberSigned"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:textColorHint="#fff"
+        />
+
+    <Button
+        android:id="@+id/about_you_next_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/about_you_next_button" />
+    </LinearLayout>
+</LinearLayout>
