@@ -18,7 +18,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_back_white_24dp" />
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:id="@+id/patient_details_back_button"
+            android:onClick="backFromPatientDetails"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -216,6 +218,8 @@
         app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.98"
+        android:id="@+id/search_medicine"
+        android:onClick="searchMedicine"/>
 
 </android.support.constraint.ConstraintLayout>
