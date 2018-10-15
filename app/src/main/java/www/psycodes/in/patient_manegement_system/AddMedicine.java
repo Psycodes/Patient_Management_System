@@ -3,7 +3,7 @@ package www.psycodes.in.patient_manegement_system;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Add_medicine extends AppCompatActivity {
+public class AddMedicine extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

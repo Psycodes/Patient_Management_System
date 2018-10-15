@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchPatient"
+    tools:context=".SearchMedicine"
     android:background="@drawable/search_medicine_background">
 
 
@@ -56,5 +56,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.96"
+        android:id="@+id/add_medicine_from_List"
+        android:onClick="addMedicineFromList"/>
 </android.support.constraint.ConstraintLayout>

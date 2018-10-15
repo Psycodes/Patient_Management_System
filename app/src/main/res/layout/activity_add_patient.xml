@@ -192,7 +192,8 @@
             android:layout_weight="1"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/add_patient_add_button" />
+            android:background="@drawable/add_patient_add_button"
+            android:onClick="successfulAddPatient"/>
     </LinearLayout>
 
 </LinearLayout>
