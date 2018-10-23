@@ -189,14 +189,14 @@
         android:textColorHint="#fff"
         />
 
-    <Button
-        android:id="@+id/about_you_next_button"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/about_you_next_button"
-        android:onClick="homePage"/>
+        <ImageView
+            android:id="@+id/about_you_next_button"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/about_you_next_button"
+            android:onClick="homePage" />
     </LinearLayout>
 </LinearLayout>

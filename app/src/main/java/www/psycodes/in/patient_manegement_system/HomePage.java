@@ -8,17 +8,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class HomePage extends AppCompatActivity {
-    Button viewPatient,addpatient,quckPrint;
-    ImageView backFromHome;
+   ImageView viewPatient, addpatient, quckPrint, backFromHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        viewPatient=findViewById(R.id.view_patient);
-        addpatient=findViewById(R.id.add_patient);
-        backFromHome=findViewById(R.id.home_screen_back_button);
-        quckPrint=findViewById(R.id.quick_print_details);
+        viewPatient = findViewById(R.id.view_patient);
+        addpatient = findViewById(R.id.add_patient);
+        backFromHome = findViewById(R.id.home_screen_back_button);
+        quckPrint = findViewById(R.id.quick_print_details);
     }
 
     public void viewPatient(View view) {

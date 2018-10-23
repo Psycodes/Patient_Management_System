@@ -1,13 +1,15 @@
 package www.psycodes.in.patient_manegement_system;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class  AboutYou extends AppCompatActivity {
-    Button aboutYouNext;
+    ImageView aboutYouNext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
