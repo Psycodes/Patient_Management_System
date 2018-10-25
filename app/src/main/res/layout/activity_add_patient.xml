@@ -45,7 +45,8 @@
             android:paddingStart="20dp"
             android:paddingLeft="20dp"
             android:hint="@string/first_name"
-            android:textColorHint="#fff" />
+            android:textColorHint="#fff"
+            android:textColor="#fff"/>
 
         <EditText
             android:id="@+id/add_patient_last_name"
@@ -59,7 +60,8 @@
             android:paddingStart="20dp"
             android:paddingLeft="20dp"
             android:hint="@string/last_name"
-            android:textColorHint="#fff"/>
+            android:textColorHint="#fff"
+            android:textColor="#fff"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,7 +83,8 @@
                 android:hint="@string/dob"
                 android:paddingLeft="20dp"
                 android:paddingStart="20dp"
-                android:textColorHint="#fff"/>
+                android:textColorHint="#fff"
+                android:textColor="#fff"/>
 
             <Spinner
                 android:id="@+id/add_patient_gender"
@@ -108,7 +111,8 @@
             android:hint="@string/landmark"
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
-            android:textColorHint="#fff"/>
+            android:textColorHint="#fff"
+            android:textColor="#fff"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,7 +133,8 @@
                 android:inputType="text"
                 android:paddingLeft="20dp"
                 android:paddingStart="20dp"
-                android:textColorHint="#fff"/>
+                android:textColorHint="#fff"
+                android:textColor="#fff"/>
 
             <Spinner
                 android:id="@+id/add_patient_state"
@@ -154,7 +159,8 @@
             android:hint="@string/pincode"
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
-            android:textColorHint="#fff"/>
+            android:textColorHint="#fff"
+            android:textColor="#fff"/>
 
         <EditText
             android:id="@+id/add_patient_symptom"
@@ -168,7 +174,8 @@
             android:hint="@string/symptom"
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
-            android:textColorHint="#fff"/>
+            android:textColorHint="#fff"
+            android:textColor="#fff"/>
 
         <EditText
             android:id="@+id/add_patient_disease"
@@ -183,6 +190,7 @@
             android:paddingLeft="20dp"
             android:paddingStart="20dp"
             android:textColorHint="#fff"
+            android:textColor="#fff"
             />
 
         <Button
@@ -193,7 +201,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/add_patient_add_button"
-            android:onClick="successfulAddPatient"/>
+            />
     </LinearLayout>
 
 </LinearLayout>

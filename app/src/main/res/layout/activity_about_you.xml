@@ -147,7 +147,7 @@
         android:layout_marginTop="10dp">
 
         <EditText
-            android:id="@+id/adout_you_city"
+            android:id="@+id/about_you_city"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -197,6 +197,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/about_you_next_button"
-        android:onClick="homePage"/>
+        />
     </LinearLayout>
 </LinearLayout>

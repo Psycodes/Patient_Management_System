@@ -4,9 +4,9 @@
     android:layout_height="match_parent">
 <TextView
     android:layout_width="0dp"
-    android:layout_height="wrap_content"
+    android:layout_height="50dp"
     android:id="@+id/search_item"
     android:layout_weight="1"
-    android:padding="16dp"
+    android:textColor="#111"
     android:textSize="24sp"/>
 </LinearLayout>
