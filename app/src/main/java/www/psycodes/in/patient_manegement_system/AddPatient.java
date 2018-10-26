@@ -28,10 +28,20 @@ public class AddPatient extends AppCompatActivity {
     String landmark;
     String city;
     String pincode;
+
+    public   final static String EXTRA_TEXT="WWW.PSYCODES.IN";
+    public   final static String EXTRA_TEX1="WWW.PSYCODES.IN1";
+    public   final static String EXTRA_TE2="WWW.PSYCODES.IN2";
+    public   final static String EXTRA_T3="WWW.PSYCODES.IN3";
+    public   final static String EXTRA_4="WWW.PSYCODES.IN4";
+    public   final static String EXTRA_EXT5="WWW.PSYCODES.IN5";
+    public   final static String EXTRA_XT6="WWW.PSYCODES.IN6";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_patient);
+
         addPatientDoneButton=findViewById(R.id.add_patient_add_button);
 
         First_Name = findViewById(R.id.add_patient_first_name);
@@ -49,9 +59,17 @@ public class AddPatient extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 data();
-                if(Fname.length() != 0 && Disease.length()!= 0 ){
-                    Toast.makeText(AddPatient.this, "Patient Added Successfully", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(AddPatient.this,PatientDetails.class));
+                if(Fname.trim().length() != 0 && disease.trim().length()!= 0 ){
+                   Toast.makeText(AddPatient.this, "Patient Added Successfully", Toast.LENGTH_SHORT).show();
+                   Intent intent= new Intent(AddPatient.this,PatientDetails.class);
+                    intent.putExtra(EXTRA_TEXT,Fname);
+                    intent.putExtra(EXTRA_TEX1,Lname);
+                    intent.putExtra(EXTRA_TE2,symptom);
+                    intent.putExtra(EXTRA_T3,disease);
+                    intent.putExtra(EXTRA_4,landmark);
+                    intent.putExtra(EXTRA_EXT5,city);
+                    intent.putExtra(EXTRA_XT6,pincode);
+                   startActivity(intent);
                 }
             }
 
@@ -59,14 +77,14 @@ public class AddPatient extends AppCompatActivity {
     }
 
     private void data() {
-        Fname = First_Name.getText().toString().trim();
-        Lname = Last_Name.getText().toString().trim();
+        Fname = First_Name.getText().toString();
+        Lname = Last_Name.getText().toString();
         dob = Dob.getText().toString().trim();
-        symptom = Symptom.getText().toString().trim();
-        disease = Disease.getText().toString().trim();
-        landmark = Landmark.getText().toString().trim();
-        city = City.getText().toString().trim();
-        pincode = Pincode.getText().toString().trim();
+        symptom = Symptom.getText().toString();
+        disease = Disease.getText().toString();
+        landmark = Landmark.getText().toString();
+        city = City.getText().toString();
+        pincode = Pincode.getText().toString();
     }
 
 }

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class  AboutYou extends AppCompatActivity {
     Button aboutYouNext;
@@ -25,6 +26,7 @@ public class  AboutYou extends AppCompatActivity {
     String landmark;
     String city;
     String pincode;
+    int flag=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,4 +71,14 @@ public class  AboutYou extends AppCompatActivity {
     }
 
 
+    public void Go_Back(View view) {
+        if(flag == 0) {
+            Toast.makeText(AboutYou.this, "Press again to exit", Toast.LENGTH_SHORT).show();
+            flag =1;
+        }
+//        if(flag == 1){
+//            //here code to exit the app
+//        }
+
+    }
 }
