@@ -12,6 +12,7 @@ public class PatientDetails extends AppCompatActivity {
     FloatingActionButton addMedicineButton;
     ImageView backFromPatientDetails;
 
+    TextView NAME;
     TextView First_Name;
     TextView Last_Name;
     TextView Landmark;
@@ -29,8 +30,6 @@ public class PatientDetails extends AppCompatActivity {
     String city;
     String pincode;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +37,7 @@ public class PatientDetails extends AppCompatActivity {
         addMedicineButton = findViewById(R.id.search_medicine);
         backFromPatientDetails = findViewById(R.id.patient_details_back_button);
 
+        NAME = findViewById(R.id.patient_name);
         First_Name = findViewById(R.id.patient_Fname);
         Last_Name = findViewById(R.id.patient_Lname);
         Landmark = findViewById(R.id.patient_landmark);
@@ -55,7 +55,7 @@ public class PatientDetails extends AppCompatActivity {
         city = intent.getStringExtra(AddPatient.EXTRA_EXT5);
         pincode = intent.getStringExtra(AddPatient.EXTRA_XT6);
 
-
+        NAME.setText(Fname.toUpperCase());
         First_Name.setText(Fname.toUpperCase());
         Last_Name.setText(Lname.toUpperCase());
         Symptom.setText(symptom);
@@ -64,25 +64,11 @@ public class PatientDetails extends AppCompatActivity {
         Pincode.setText(pincode);
         Disease.setText(disease);
 
-
-
     }
-
     public void searchMedicine(View view) {
-        addMedicineButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 startActivity(new Intent(PatientDetails.this,SearchMedicine.class));
-            }
-        });
     }
-
     public void backFromPatientDetails(View view) {
-        backFromPatientDetails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 startActivity(new Intent(PatientDetails.this,HomePage.class));
-            }
-        });
     }
 }

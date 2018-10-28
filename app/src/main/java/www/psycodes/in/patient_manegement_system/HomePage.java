@@ -20,7 +20,5 @@ public class HomePage extends AppCompatActivity {
     public void backFromHome(View view) {
                 startActivity(new Intent(HomePage.this,AboutYou.class));
     }
-    public void printDetails(View view) {
-                startActivity(new Intent(HomePage.this,SearchMedicine.class));
-    }
+    public void printDetails(View view) { startActivity(new Intent(HomePage.this,SearchMedicine.class));}
 }

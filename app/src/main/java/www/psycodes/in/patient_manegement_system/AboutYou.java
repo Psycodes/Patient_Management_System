@@ -4,15 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class  AboutYou extends AppCompatActivity {
+public class  AboutYou extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
     Button aboutYouNext;
 
     EditText First_Name;
@@ -24,6 +27,8 @@ public class  AboutYou extends AppCompatActivity {
     EditText City;
     EditText Pincode;
 
+    Spinner spinner;
+
     String Fname;
     String Lname;
     String dob;
@@ -32,6 +37,7 @@ public class  AboutYou extends AppCompatActivity {
     String landmark;
     String city;
     String pincode;
+    String gender;
     String text;
 
     int flag=0;
@@ -52,12 +58,19 @@ public class  AboutYou extends AppCompatActivity {
         Landmark = findViewById(R.id.about_you_land_mark);
         City = findViewById(R.id.about_you_city);
         Pincode = findViewById(R.id.about_you_pincode);
+        spinner = findViewById(R.id.about_you_gender);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.about_you_gender,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         aboutYouNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 data();
                 if(Fname.length() != 0 && hospital.length() != 0 && city.length() != 0 && pincode.length() != 0 ){
+                   Toast.makeText(AboutYou.this,"Saved",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(AboutYou.this,HomePage.class));
                 }
             }
@@ -75,14 +88,13 @@ public class  AboutYou extends AppCompatActivity {
         pincode = Pincode.getText().toString();
 
         text = "       ABOUT_YOU          \n---------------------------------\nFIRST NAME:"+ Arrays.toString(Fname.toUpperCase().getBytes()) +"\nLAST NAME:"+ Arrays.toString(Lname.toUpperCase().getBytes()) + "\nDATE-OF-BIRTH:"+ Arrays.toString(dob.toUpperCase().getBytes()) +"\n"+
-               "SPECIALIZATION:"+ Arrays.toString(Spec.toUpperCase().getBytes()) +"\nHOSPITAL:"+ Arrays.toString(hospital.toUpperCase().getBytes()) + "\nLANDMARK:"+ Arrays.toString(landmark.toUpperCase().getBytes()) +"\n"+
+                "GENDER:"+ Arrays.toString(gender.toUpperCase().getBytes()) +"SPECIALIZATION:"+ Arrays.toString(Spec.toUpperCase().getBytes()) +"\nHOSPITAL:"+ Arrays.toString(hospital.toUpperCase().getBytes()) + "\nLANDMARK:"+ Arrays.toString(landmark.toUpperCase().getBytes()) +"\n"+
                "CITY:"+ Arrays.toString(city.toUpperCase().getBytes()) +"\nPINCODE:"+ Arrays.toString(pincode.toUpperCase().getBytes()) +"\n";
 
         try {
             FileOutputStream fileOutputStream;
             fileOutputStream = openFileOutput(FILE_NAME,MODE_PRIVATE);
             fileOutputStream.write(text.getBytes());
-            Toast.makeText(this, "saved", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -97,5 +109,15 @@ public class  AboutYou extends AppCompatActivity {
         if(flag == 1){
             finish();
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+         gender = adapterView.getItemAtPosition(i).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
