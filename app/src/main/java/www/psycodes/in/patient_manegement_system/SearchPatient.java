@@ -15,14 +15,8 @@ public class SearchPatient extends AppCompatActivity {
         setContentView(R.layout.activity_search_patient);
         addPatientlist = findViewById(R.id.add_patient_list);
     }
-
     public void addPatientFromList(View view) {
-        addPatientlist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 startActivity(new Intent(SearchPatient.this, PatientDetails.class));
-            }
-        });
     }
 }
 

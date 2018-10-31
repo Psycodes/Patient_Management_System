@@ -21,16 +21,8 @@ public class SearchMedicine extends AppCompatActivity {
         recyclerView = findViewById(R.id.List);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new SearchAdapter(medi));
-
     }
-
     public void addMedicineFromList(View view) {
-        addMedicineFromList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 startActivity(new Intent(SearchMedicine.this,PrescriptionDetails.class ));
-            }
-        });
-
     }
 }

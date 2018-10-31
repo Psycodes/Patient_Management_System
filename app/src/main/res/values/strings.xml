@@ -12,4 +12,11 @@
     <string name="symptom">Symptom</string>
     <string name="patient_demo_text">12345 : Suketh C Kotian</string>
     <string name="medicine_demo">Nicip</string>
+
+    <string-array name="about_you_gender">
+        <item>MALE</item>
+        <item>FEMALE</item>
+        <item>NONE OF THE ABOVE</item>
+    </string-array>
+
 </resources>
