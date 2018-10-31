@@ -35,19 +35,17 @@
     </android.support.v7.widget.Toolbar>
 
 
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        tools:ignore="ContentDescription"
-        android:layout_marginBottom="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp"
         app:srcCompat="@drawable/home_page_button_background"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="296dp" />
+        tools:ignore="ContentDescription" />
 
-    <Button
+    <ImageView
         android:id="@+id/view_patient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,7 +55,7 @@
         android:background="@drawable/view_patient"
         android:onClick="viewPatient"/>
 
-    <Button
+    <ImageView
         android:id="@+id/add_patient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,9 +66,9 @@
         android:layout_marginLeft="53dp"
         android:layout_marginBottom="134dp"
         android:background="@drawable/add_patient"
-        android:onClick="addPatient"/>
+        android:onClick="addPatient" />
 
-    <Button
+    <ImageView
         android:id="@+id/remove_patient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,7 +80,7 @@
         android:layout_marginBottom="131dp"
         android:background="@drawable/remove_patient" />
 
-    <Button
+    <ImageView
         android:id="@+id/quick_print_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

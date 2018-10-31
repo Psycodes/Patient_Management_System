@@ -37,6 +37,11 @@ public class AddPatient extends AppCompatActivity {
     public   final static String EXTRA_EXT5="WWW.PSYCODES.IN5";
     public   final static String EXTRA_XT6="WWW.PSYCODES.IN6";
 
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class AddPatient extends AppCompatActivity {
+   ImageView addPatientDoneButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

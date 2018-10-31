@@ -6,10 +6,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class HomePage extends AppCompatActivity {
+
+   ImageView viewPatient, addpatient, quckPrint, backFromHome;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        viewPatient = findViewById(R.id.view_patient);
+        addpatient = findViewById(R.id.add_patient);
+        backFromHome = findViewById(R.id.home_screen_back_button);
+        quckPrint = findViewById(R.id.quick_print_details);
     }
     public void viewPatient(View view) {
                 startActivity(new Intent(HomePage.this,SearchPatient.class));
